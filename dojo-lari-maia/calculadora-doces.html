@@ -11,19 +11,93 @@
 </head>
 
 <body>
-    <input id="porcentagemBonus" type="number" placeholder="Porcentagem de bônus">
+    <div id="container">
+        <div>
+            <input id="porcentagemBonus" type="number" placeholder="Porcentagem de bônus">
+        </div>
+        <div>
+            <input id="celofane" type="number" placeholder="Celofane">
+        </div>
+        <div>
+            <input id="crepom" type="number" placeholder="Crepom">
+        </div>
+        <div>
+            <input id="lacoChannel" type="number" placeholder="Laço channel">
+        </div>
+        <div>
+            <input id="importado" type="number" placeholder="Papel importado">
+        </div>
+        <div>
+            <input id="caixa" type="number" placeholder="Caixa">
+        </div>
+        <div>
+            <input type="button" value="Calcular" onclick="calculadora.calcular()" />
+        </div>
 
-    <input id="celofane" type="number" placeholder="Celofane">
+        <!-- PREÇOS -->
+        <div id="info" class="ocultar">
+            <div>
+                <label>Preço do Celofane</label>
+                <label id="precoCelofane"></label>
+            </div>
+            <div>
+                <label>Preço do Crepom</label>
+                <label id="precoCrepom"></label>
+            </div>
+            <div>
+                <label>Preço do Laço Channel</label>
+                <label id="precoLacoChannel"></label>
+            </div>
+            <div>
+                <label>Preço do Importado</label>
+                <label id="precoImportado"></label>
+            </div>
+            <div>
+                <label>Preço da Caixa</label>
+                <label id="precoCaixa"></label>
+            </div>
 
-    <input id="crepom" type="number" placeholder="Crepom">
+            <!-- BÔNUS -->
+            <div>
+                <label>Bônus do Celofane</label>
+                <label id="bonusCelofane"></label>
+            </div>
+            <div>
+                <label>Bônus do Crepom</label>
+                <label id="bonusCrepom"></label>
+            </div>
+            <div>
+                <label>Bônus do Laço Channel</label>
+                <label id="bonusLacoChannel"></label>
+            </div>
+            <div>
+                <label>Bônus do Importado</label>
+                <label id="bonusImportado"></label>
+            </div>
+            <div>
+                <label>Bônus da Caixa</label>
+                <label id="bonusCaixa"></label>
+            </div>
 
-    <input id="lacoChannel" type="number" placeholder="Laço channel">
+            <!-- SOMA DAS QUANTIDADES -->
+            <div>
+                <label>Total de Quantidade</label>
+                <label id="somaDasQuantidades"></label>
+            </div>
 
-    <input id="importado" type="number" placeholder="Papel importado">
+            <!-- SOMA DOS BÔNUS -->
+            <div>
+                <label>Total de Bônus</label>
+                <label id="somaDosBonus"></label>
+            </div>
 
-    <input id="caixa" type="number" placeholder="Caixa">
-
-    <input type="button" value="Calcular" onclick="calculadora.calcular()" />
+            <!-- SOMA DOS PREÇOS -->
+            <div>
+                <label>Total dos Preços</label>
+                <label id="somaDosPrecos"></label>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
