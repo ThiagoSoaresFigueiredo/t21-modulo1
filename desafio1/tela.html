@@ -21,6 +21,18 @@
             function dividir() {
                 alert(parseFloat(document.getElementById('n1').value) / parseFloat(document.getElementById('n2').value))
             }
+
+            function porcentar() {
+                var n1 = document.getElementById('n1').value
+                var n2 = document.getElementById('n2').value
+
+                n1 = parseFloat(n1)
+                n2 = parseFloat(n2)
+
+                calculo = n1 * (n2 / 100)
+
+                alert(calculo)
+            }
         </script>
 
         <style>
@@ -80,6 +92,7 @@
                 <button id="btnCalcular" onclick="subtrair()">-</button>
                 <button id="btnCalcular" onclick="multiplicar()">x</button>
                 <button id="btnCalcular" onclick="dividir()">/</button>
+                <button id="btnCalcular" onclick="porcentar()">%</button>
             </div>
         </div>
     </body>
