@@ -5,6 +5,24 @@
         <meta charset="utf-8" />
         <title>FDP - Calculadora</title>
 
+        <script>
+            function somar() {
+                alert(parseFloat(document.getElementById('n1').value) + parseFloat(document.getElementById('n2').value))
+            }
+
+            function subtrair() {
+                alert(parseFloat(document.getElementById('n1').value) - parseFloat(document.getElementById('n2').value))
+            }
+
+            function multiplicar() {
+                alert(parseFloat(document.getElementById('n1').value) * parseFloat(document.getElementById('n2').value))
+            }
+
+            function dividir() {
+                alert(parseFloat(document.getElementById('n1').value) / parseFloat(document.getElementById('n2').value))
+            }
+        </script>
+
         <style>
             #calculadora {
                 background-color: #dae8fc;
@@ -58,7 +76,10 @@
                 <input id="n2" type="number" />
             </div>
             <div>
-                <button id="btnCalcular">Calcular</button>
+                <button id="btnCalcular" onclick="somar()">+</button>
+                <button id="btnCalcular" onclick="subtrair()">-</button>
+                <button id="btnCalcular" onclick="multiplicar()">x</button>
+                <button id="btnCalcular" onclick="dividir()">/</button>
             </div>
         </div>
     </body>

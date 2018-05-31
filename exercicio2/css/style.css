@@ -40,11 +40,12 @@ nav {
     background-color: rgb(9, 163, 198);
     float: left;
     width: 30%;
-    height: 600px;
+    height: 100%;
     box-shadow: 3px 0px 7px gray;
     color: white;
     transition: width 1s;
     overflow: hidden;
+    position: fixed;
     border-radius: 2px;
 }
 
@@ -70,13 +71,19 @@ main {
 }
 
 .menu_fechar {
-    width: 20px;
+    width: 10px;
+    height: 10px;
     opacity: 0;
 }
 
 .menu_abrir {
-    width: 20px;
+    width: 10px;
+    height: 10px;
     opacity: 0;
+}
+
+.menu_aberto {
+    width: 50%;
 }
 
 @media(max-width:600px) {
