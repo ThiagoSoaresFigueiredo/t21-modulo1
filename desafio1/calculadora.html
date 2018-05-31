@@ -1,0 +1,40 @@
+<DOCTYPE <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>FDP - Calculadora</title>
+
+        <script src="calculadora.js"></script>
+
+        <link rel="stylesheet" href="calculadora.css">
+    </head>
+
+    <body>
+        <div id="calculadora">
+            <div>
+                <h1>Calculadora HighTech</h1>
+            </div>
+            <div>
+                <label for="n1">Número 1</label>
+            </div>
+            <div>
+                <input id="n1" type="number" />
+            </div>
+            <div>
+                <label for="n2">Número 2</label>
+            </div>
+            <div>
+                <input id="n2" type="number" />
+            </div>
+            <div>
+                <button id="btnCalcular" onclick="calculadora.somar()">+</button>
+                <button id="btnCalcular" onclick="calculadora.subtrair()">-</button>
+                <button id="btnCalcular" onclick="calculadora.multiplicar()">x</button>
+                <button id="btnCalcular" onclick="calculadora.dividir()">/</button>
+                <button id="btnCalcular" onclick="calculadora.porcentar()">%</button>
+            </div>
+        </div>
+    </body>
+
+    </html>
