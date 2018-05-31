@@ -1,0 +1,36 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div {
+    padding: 10px;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+}
+
+input[type='text'], input[type='email'], input[type='datetime-local'] {
+    width: 100%;
+    padding: 5px;
+}
+
+select {
+    padding: 5px;
+}
+
+button {
+    background-color: rgb(9, 163, 198);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+}
+
+.centro {
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(9, 163, 198);
+}

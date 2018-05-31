@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Cliente</title>
+
+    <!-- IMPORTANDO O CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        MENU
+    </nav>
+
+    <main>
+        <h1 class="centro">Cadastro de Cliente</h1>
+
+        <!-- FORMULÁRIO -->
+        <form action="#">
+
+            <!-- NOME -->
+            <div>
+                <input type="text" placeholder="Nome" />
+            </div>
+
+            <!-- EMAIL -->
+            <div>
+                <input type="email" placeholder="E-mail" />
+            </div>
+
+            <!-- SEXO -->
+            <div>
+                <label for="m">Masculino</label>
+                <input id="m" type="radio" name="sexo" />
+
+                <label for="f">Feminino</label>
+                <input id="f" type="radio" name="sexo" />
+            </div>
+
+            <!-- CURSOS -->
+            <fieldset>
+                <legend>Cursos de interesse</legend>
+
+                <div>
+                    <input id="js" type="checkbox" />
+                    <label for="js">JavaScript</label>
+                </div>
+
+                <div>
+                    <input id="html" type="checkbox" />
+                    <label for="html">HTML</label>
+                </div>
+
+                <div>
+                    <input id="css" type="checkbox" />
+                    <label for="css">CSS</label>
+                </div>
+            </fieldset>
+
+            <!-- ESTADO -->
+            <div>
+                <label for="estado">Estado</label>
+                <select id="estado">
+                    <option value="" selected>Selecionar</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="pr">Paraná</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="go">Goiás</option>
+                    <option value="rj">Rio de Janeiro</option>
+                </select>
+            </div>
+
+            <!-- FOTO -->
+            <div>
+                <label for="foto">Foto</label>
+                <input id="foto" type="file" />
+            </div>
+
+            <!-- DATA DE NASCIMENTO -->
+            <div>
+                <label for="dataNascimento">Data de nascimento</label>
+                <input id="dataNascimento" type="datetime-local" />
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="centro">
+                <button>Salvar</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
