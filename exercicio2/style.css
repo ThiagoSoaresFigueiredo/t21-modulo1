@@ -33,4 +33,18 @@ button {
 
 nav {
     background-color: rgb(9, 163, 198);
+    float: left;
+    width: 30%;
+    height: 100%;
+    box-shadow: 5px 0px 10px gray;
+    color: white;
+}
+
+nav li {
+    list-style: none
+}
+
+main {
+    float: right;
+    width: 70%;
 }
