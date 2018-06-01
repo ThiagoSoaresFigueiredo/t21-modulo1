@@ -7,9 +7,11 @@
 
     <!-- IMPORTANDO O CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cadastro.css" />
 
     <!-- IMPORTANDO O JAVASCRIPT -->
     <script src="js/menu.js"></script>
+    <script src="js/cadastro.js"></script>
 </head>
 
 <body>
@@ -35,21 +37,26 @@
         <!-- FORMULÁRIO -->
         <form action="#">
 
-            <div>
-                <input type="text" placeholder="Nome" />
+            <div id="mensagem" class="mensagem">
+                <img src="img/close-icon.svg" class="imagemMensagem" onclick="fecharMensagem()" />
+                <div id="textoDaMensagem"></div>
             </div>
 
             <div>
-                <input type="email" placeholder="E-mail" />
+                <input id="nome" type="text" placeholder="Nome" />
+            </div>
+
+            <div>
+                <input id="email" type="email" placeholder="E-mail" />
             </div>
 
             <!-- SEXO -->
             <div>
                 <label for="m">Masculino</label>
-                <input id="m" type="radio" name="sexo" />
+                <input id="m" value="m" type="radio" name="sexo" />
 
                 <label for="f">Feminino</label>
-                <input id="f" type="radio" name="sexo" />
+                <input id="f" value="f" type="radio" name="sexo" />
             </div>
 
             <!-- CURSOS -->
@@ -57,17 +64,17 @@
                 <legend>Cursos de interesse</legend>
 
                 <div>
-                    <input id="js" type="checkbox" />
+                    <input id="js" type="checkbox" name="curso" />
                     <label for="js">JavaScript</label>
                 </div>
 
                 <div>
-                    <input id="html" type="checkbox" />
+                    <input id="html" type="checkbox" name="curso" />
                     <label for="html">HTML</label>
                 </div>
 
                 <div>
-                    <input id="css" type="checkbox" />
+                    <input id="css" type="checkbox" name="curso" />
                     <label for="css">CSS</label>
                 </div>
             </fieldset>
@@ -99,7 +106,7 @@
 
             <!-- BOTÕES -->
             <div class="centro">
-                <button>Salvar</button>
+                <button type="button" onclick="cadastro.validar()">Salvar</button>
             </div>
         </form>
     </main>

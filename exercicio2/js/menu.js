@@ -5,3 +5,7 @@ function abrirMenu() {
 function fecharMenu() {
     document.getElementById('menu').classList.remove('menu_aberto')
 }
+
+function fecharMensagem() {
+    document.getElementById("mensagem").classList.remove("mostrarMensagem")
+}
