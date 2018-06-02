@@ -9,7 +9,6 @@ class ListaConvidados {
         let nome = document.getElementById('inputConvidado').value;
         let lista = document.getElementById('lista');
 
-        // DADOS DA LISTA
         let div = document.createElement('div');
         div.classList.add('item-lista');
         div.id = this.id;
@@ -28,9 +27,9 @@ class ListaConvidados {
 
         lista.appendChild(div);
 
-        this.id++;
-        
         this.qtd = lista.getElementsByTagName('div').length;
+        this.id++;
+
         let labelQtde = document.getElementById('qtde');
         labelQtde.innerText = "(" + this.qtd + ")";
     }
