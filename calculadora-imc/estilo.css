@@ -1,0 +1,26 @@
+body {
+    background-image: url("http://okmas.es/zaragoza/wp-content/uploads/sites/20/2017/09/Men-Body-Fitness-Download-Free-Desktop-Wallpaper-Images-Pictures-1.jpg");
+    background-size: 100%;
+}
+
+.card-master {
+    width: 15%;
+    height: 500px;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    opacity: 0.6;
+}
+
+.card-master h2 {
+    font-weight: 600;
+    font-size: 30px;
+}
