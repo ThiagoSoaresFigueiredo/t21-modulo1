@@ -3,6 +3,7 @@ body {
     color: #c7b6b6;
     background-image: url("https://i.pinimg.com/originals/12/3a/33/123a33e0824a5b63762ce9b29a2f889c.jpg");
     background-size: cover;
+    opacity: 0.93;
 }
 
 h2 {
@@ -115,4 +116,12 @@ h2 span {
         transform: translate3d(0px, 0px, 0px);
         opacity: 1;
     }
+}
+
+.ocultarDiv {
+    display: none;
+}
+
+.mostrarDiv {
+    display: block;
 }

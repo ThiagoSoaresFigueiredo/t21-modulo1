@@ -34,7 +34,7 @@ class ListaCarros {
         spanAno.innerText = ano;
 
         let imgExcluir = document.createElement("img");
-        imgExcluir.src = "img/delete01.svg";
+        imgExcluir.src = "img/delete.svg";
         imgExcluir.title = "Excluir carro";
         imgExcluir.setAttribute("onclick",
             "listaDeCarros.deletar('" + this.id + "')");
@@ -46,12 +46,14 @@ class ListaCarros {
         lista.appendChild(divLista);
         //
 
-        this.montarTabelaDeComparativos(ano, lista, marca, modelo);
         this.atualizarQtdeDeRegistros();
+        
+        this.montarTabelaDeComparativos(ano, lista, marca, modelo);
+        
         this.mostrarTelaDeComparativos();
     }
 
-    deletar(id, ano, lista, marca, modelo) {
+    deletar(id) {
         // DELETANDO O REGISTRO
         let registroParaDeletar = document.getElementById(id);
         let list = document.getElementById("lista");
@@ -59,7 +61,10 @@ class ListaCarros {
         //
 
         this.atualizarQtdeDeRegistros();
-        this.montarTabelaDeComparativos(ano, lista, marca, modelo);
+
+        if (this.qtd == 0) {
+            console.log(this.qtd);
+        }
     }
 
     atualizarQtdeDeRegistros() {
@@ -69,31 +74,26 @@ class ListaCarros {
     }
 
     montarTabelaDeComparativos(ano, lista, marca, modelo) {
-        if (lista.getElementsByTagName("div").length == 0) {
-            document.getElementById("comparativos").innerText = "Não existem registros para serem comparados."
-        } else {
+        ano = parseInt(ano);
+        this.somaDosAnos += ano;
 
-            ano = parseInt(ano);
-            this.somaDosAnos += ano;
-
-            if (ano > this.carroNovo) {
-                this.carroNovo = ano;
-                document.getElementById("carroMaisNovo").innerText =
-                    "Carro mais novo: " + marca + " " + modelo + " " + ano;
-            }
-            console.log(this.carroNovo)
-
-            if (ano < this.carroVelho) {
-                this.carroVelho = ano;
-                document.getElementById("carroMaisVelho").innerText =
-                    "Carro mais velho: " + marca + " " + modelo + " " + ano;
-            }
-            console.log(this.carroVelho)
-
-            let mediaDosAnos = this.somaDosAnos / lista.getElementsByTagName("div").length;
-            document.getElementById("mediaDosAnos").innerText =
-                "Média dos anos: " + mediaDosAnos;
+        if (ano > this.carroNovo) {
+            this.carroNovo = ano;
+            document.getElementById("carroMaisNovo").innerText =
+                "Carro mais novo: " + marca + " " + modelo + " " + ano;
         }
+        console.log(this.carroNovo)
+
+        if (ano < this.carroVelho) {
+            this.carroVelho = ano;
+            document.getElementById("carroMaisVelho").innerText =
+                "Carro mais velho: " + marca + " " + modelo + " " + ano;
+        }
+        console.log(this.carroVelho)
+
+        let mediaDosAnos = parseInt(this.somaDosAnos / lista.getElementsByTagName("div").length);
+        document.getElementById("mediaDosAnos").innerText =
+            "Média dos anos: " + mediaDosAnos;
     }
 
     mostrarTelaDeComparativos() {
