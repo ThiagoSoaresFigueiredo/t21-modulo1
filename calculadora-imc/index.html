@@ -13,26 +13,45 @@
 </head>
 
 <body>
+    <div id="fundo"></div>
+
     <div class="card-master">
         <h2>Calculadora de IMC</h2>
 
         <div id="dados">
             <div id="peso">
                 <div>
-                    <label id="labelPeso">Peso</label>
+                    <label id="labelPeso">Peso (kg)</label>
                 </div>
                 <div>
-                    <input type="text" id="inputPeso">
+                    <input type="number" id="inputPeso">
                 </div>
             </div>
             <div id="altura">
                 <div>
-                    <label id="labelAltura">Altura</label>
+                    <label id="labelAltura">Altura (m)</label>
                 </div>
                 <div>
-                    <input type="text" id="inputAltura">
+                    <input type="number" id="inputAltura">
                 </div>
             </div>
+        </div>
+
+        <div id="botoes">
+            <div id="btnCalcular">
+                <button onclick="calculo.calcular()">Calcular IMC</button>
+            </div>
+            <div id="btnClassificar">
+                <button>Classificação</button>
+            </div>
+        </div>
+
+        <div id="resCalculo">
+            <label id="peso">Calculo</label>
+        </div>
+
+        <div id="resClassific">
+            <label id="classific">Classificação</label>
         </div>
     </div>
 </body>
